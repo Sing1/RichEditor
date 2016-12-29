@@ -7,10 +7,10 @@
 ##选择图片
 ![](image/ic_03.jpg)
 ##预览最后效果
-![](image/ic_02.jpg)
+![](image/ic_02.jpg)  
 完全利用了RecyclerView来实现，没有任何自定义View（是不是感觉还可以？^_^）  
 看下代码：  
-####Adapter
+##Adapter
 完全标准的RecyclerView的Adapter，使用getItemViewType(int position)来区分标题和Item
   
 ```JAVA   
@@ -66,8 +66,9 @@ public void onBindViewHolder(final MyViewHolder holder, final int position) {
     }
 }
 ```
-是不是和平常写的Adapter没有区别？继续看Activity的代码，其实和普通的RecyclerView是一模一样的，  
-关键是处理一下选择图片后返回时的一些逻辑：
+是不是和平常写的Adapter没有区别？
+##Activity
+其实和普通的RecyclerView是一模一样的，关键是处理一下选择图片后返回时的一些逻辑：
 >- 选择图片时，光标在Item的最前面
 >- 选择图片时，光标在Item的最后面
 >- 选择图片时，光标在Item的中间
